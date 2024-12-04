@@ -13,7 +13,7 @@ private:
         if (index < input.length()) {
             return input[index];
         }
-        return '$';
+        return '$'; // End of input
     }
 
     void match(char expected) {
@@ -59,9 +59,6 @@ private:
             ELEMENTO();
         } else if (currentChar() == ':') {
             ELEMENTO();
-            match(':');
-            ELEMENTO();
-        } else if (currentChar() == ':') {
             match(':');
             ELEMENTO();
         } else {
